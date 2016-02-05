@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ポートフォリオサンプルページ</title>
+    <meta name= "description" content="ポートフォリオのサンプルページです。インデント等を綺麗に揃えて読みやすいページを作りましょう。">
+    <meta name="keywords" content="ポートフォリオ,作品集">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container">
+    <article>
+      <h1>
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        ポートフォリオサンプル
+      </h1>
+      <div class="alert alert-danger" role="alert">
+      	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	        Bootstrap3を使用しています。
+      </div>
+      <h2>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        目次
+      </h2>
+      <p><a href="./html.html" target="_blank">HTMLの基本</a></p>
+      <h2>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        インデントは綺麗に整えましょう。
+      </h2>
+      <p>あなたをアピールするポートフォリオサイトです。バグを発見しやすくするためにも<mark>綺麗なインデント</mark>を心がけましょう。</p>
+      <ul>
+        <li><input type="checkbox" checked>&nbsp;metaタグ(title/keyword/description)は適切に記載されているか</li>
+        <li><input type="checkbox" checked>&nbsp;空白に全角を使っていないか</li>
+        <li><input type="checkbox" checked>&nbsp;誤字・脱字がないか</li>
+        <li><input type="checkbox" checked>&nbsp;画像や文章等著作権の問題は大丈夫か</li>
+        <li><input type="checkbox" checked>&nbsp;
+        <a href="https://github.com/learn-study/" target="_blank">Githubへのリンク</a>もつけてみましょう</li>
+      </ul>
+      <h2>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        CSSをチェックしてみましょう。
+      </h2>
+<div class="panel panel-default">
+					<div class="panel-heading">
+        以下リンク先に調べたいurlを入れてみてください。
+        </div>
+        <div class="list-group">
+        <a class="list-group-item" href= "http://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation Service</a>
+      </div></div>
+      <h2>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Bootstrapで水平横並びなFormを作成。
+      </h2>
+      <ul>
+        <li><mark>ソースは右クリック＞＞ページのソースを表示などでご覧ください。</mark></li>
+        <li>ラベルを2、フォームを10とした2:10のグリッドシステムで作るサンプル</li>
+      	<li><code>form</code>の<code>class</code>に<code>form-horizontal</code>を指定する。</li>
+        <li>ラベルとフォーム部品を、<code>class</code>に<code>form-group</code>を指定した<code>div</code>で括る。</li>
+	      <li><code>label</code>の<code>class</code>に、<code>col-sm-2</code>と<code>control-label</code>を指定する。</li>
+	      <li><code>input</code>などのフォーム部品を、<code>class</code>に<code>col-sm-10</code>を指定した<code>div</code>で括る。</li>
+      </ul>
+      <form class="form-horizontal">
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="Inputname">お名前</label>
+      		<div class="col-sm-10">
+      			<input type="text" class="form-control" id="Inputname" placeholder="お名前">
+      		</div>
+      	</div>
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputEmail">メールアドレス</label>
+      		<div class="col-sm-10">
+      			<input type="email" class="form-control" id="InputEmail" placeholder="メールアドレス">
+      		</div>
+      	</div>
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputPassword">パスワード</label>
+      		<div class="col-sm-10">
+      			<input type="password" class="form-control" id="InputPassword" placeholder="パスワード">
+      		</div>
+      	</div>
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputSelect">選択</label>
+      		<div class="col-sm-10">
+      			<select class="form-control" id="InputSelect">
+      				<option>選択肢１</option>
+      				<option>選択肢２</option>
+      				<option>選択肢３</option>
+      			</select>
+      		</div>
+      	</div>
+      	<div class="form-group">
+      		<div class="col-sm-offset-2 col-sm-10">
+      			<div class="checkbox">
+      				<label>
+      					<input type="checkbox" value="checkboxA"> チェックボックスＡ
+      				</label>
+      			</div>
+      			<div class="checkbox">
+      				<label>
+      					<input type="checkbox" value="checkboxB"> チェックボックスＢ
+      				</label>
+      			</div>
+      		</div>
+      	</div>
+      	<div class="form-group">
+      		<div class="col-sm-offset-2 col-sm-10">
+      			<button type="submit" class="btn btn-default">送信</button>
+      		</div>
+      	</div>
+      </form>
+      <h3>参考になりそうなサイト</h3>
+      <ul>
+        <li>Bootstrap&nbsp;:&nbsp;<a href="http://bootstrap3.cyberlab.info/" target="_blank">Bootstrap3日本語リファレンス</a></li>
+        <li>HTML/CSS&nbsp;:&nbsp;<a href="http://www.htmq.com/" target="_blank">HTMLクイックリファレンス</a></li>
+      </ul>
+    </article>
+    <footer class="text-center">
+    &copy;&nbsp;yokki&nbsp;/&nbsp;ポートフォリオサンプル
+    </footer>
+  </body>
+</html>

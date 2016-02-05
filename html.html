@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>htmlの基礎</title>
+    <meta name="description" content="htmlの基礎を学びます。">
+    <link rel="stylesheet" type="text/css" href="./normal.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="./railscasts.css">
+	  <script src="./highlight.pack.js"></script>
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head> 
+  <body>
+    <h1>HTMLの基礎知識</h1>
+    <p>本章ではHTMLの基本的な構造と知識を学びます。</p>
+    <p>HTMLにはバージョンがあり、本カリキュラムでは<b>HTML5</b>として説明しています。</p>
+    <h2>HTMLとは</h2>
+    <ul>
+      <li>ウェブ上の文書を記述するための言語</li>
+      <li>Hyper Text Markup Language(ハイパー・テキスト・マークアップ・ランゲージ）の略</li>
+      <li>文書の構造や意味を<b>htmlタグ</b>として記述する</li>
+      <li>htmlタグは半角で記述しなければならない</li>
+      <li>html5、xhtml、html4.01などバージョンがある</li>
+      <li><b>W3C</b>という団体の勧告で世界的に標準化されている</li>
+      <li><b>HTML5</b>が現在の主流。</li>
+      <li>index.htmlのように拡張子は<b>.html</b></li>
+    </ul>
+    <dl>
+      <dt>参考</dt>
+      <dd>
+        <ul>
+          <li><a href="https://www.w3.org/TR/html5/" target="_blank">W3C HTML5(原文)</a></li>
+          <li><a href="http://momdo.github.io/html5/Overview.html" target="_blank">W3C HTML5(日本訳・非公式)</a></li>
+          <li><a href="https://validator.w3.org/" target="_blank">W3C準拠のhtmlチェッカー</a></li>
+        </ul>
+      </dd>
+    </dl>
+
+    <h2>HTMLソースを確認する</h2>
+    <p>ブラウザ上で右クリックをし、「ページのソースを表示する」をクリックしてみてください。英語の文字列が付与されたページが表示されたと思います。<br>
+    これがhtmlのルールにしたがって書かれたhtmlファイルに書かれた内容になります。ブラウザはこの内容をルールに沿って人が見やすいように表示してくれています。<br>
+    それではそのルールを見ていきましょう。</p>
+    <small>※HTMLソースとはhtmlで書かれた文章を指します。</small> 
+    
+    <h2>最も基本的なhtmlの構造</h2>
+    <p>まず以下のソースコードを御覧ください。</p>
+    <pre>
+      <code class="html">
+        &lt;!DOCTYPE html&gt;
+    　　&lt;html lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;
+    　　
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;このhtmlのタイトル&lt;/title&gt;
+            &lt;meta name=&quot;description&quot; content=&quot;説明文&quot;&gt;
+          &lt;/head&gt;
+    
+          &lt;body&gt;
+            ここに内容を書く
+            実際にブラウザ上に表示される部分
+          &lt;/body&gt;
+    
+        &lt;/html&gt;
+      </code>
+      <small>※改行は見やすくするためであり、必須ではありません。</small>
+    </pre>
+    <p>
+      基本的な構造はまずドキュメントタイプを宣言し、<br>
+      &lt;HTML&gt;～&lt;/HTML&gt;でその文書がHTML文書であることを宣言、<br>
+      &lt;head&gt;～&lt;/head&gt;内にヘッダ情報を、<br>
+      &lt;body&gt;～&lt;/body&gt;内にブラウザに表示する内容を記述します。<br>
+      それでは分解して見ていきましょう。
+    </p>
+    <h3>&lt;!DOCTYPE html&gt;</h3>
+    <p>ドキュメントタイプ=「文書宣言」と呼ばれるものです。<b>HTML5</b>の文書であることを示しています。</p>
+    
+    <h3>&lt;html lang=&quot;ja&quot; dir=&quot;ltr&quot;&gt;</h3>
+    <p>
+      htmlのlang属性は「ja」、dir属性は「ltr」と言う形です。<br>
+      lang=言語(language)、jaは日本語(japanese)を表しています。<br>
+      dirは文章の方向を指定する属性でltrはleft to rightつまり左から右の方向へ文章が書かれている事を表します。<br>
+      右から左(right to left)の場合はrtl(ヘブライ語、アラビア語、ペルシャ語などの場合)とします。<br>
+      つまり、このhtmlは日本語で左から右へ書かれていると表していることになります。
+    </p>
+    
+    <h3>&lt;head&gt; ～ &lt;/head&gt;</h3>
+    <p>
+      文書のタイトル等のヘッダ情報を記述します。<br>
+      このヘッダ情報はブラウザや検索エンジン向けの記述となり、ブラウザ上で表示されることはありません。<br>
+    </p>
+    
+    <h3>&lt;body&gt; ～ &lt;/body&gt;</h3>
+    <p>
+      この中にブラウザ上に表示する記述を行います。
+    </p>
+
+    <h3>&lt;meta charset=&quot;utf-8&quot;&gt;</h3>
+    <p>
+      文字コードの指定を表すcharaset属性がutf-8であることを表します。<br>
+      基本的にutf-8を使うことを推奨します。
+    </p>
+
+    
+    <h3>&lt;title&gt; ～ &lt;/title&gt;</h3>
+    <p>
+      ここに書かれた文字は<b>seoにおいて最も強い</b>と言われています。<br>
+      検索結果のアンカーテキスト(リンクの文字)になる部分です。<br>
+      <b>googleやyahoo、bingなど検索結果のタイトルになる</b>可能性が高く、ブラウザのタブにも表示されます。<br>
+      body内に書かれた内容に沿ったタイトルをページ毎に設定する必要があります。<br>
+      ページ毎に重複しないユニークなタイトルをつけましょう。<br>
+      一般的に検索結果で32文字を超えた部分は…となるため、その範囲で書くのが良いとされています。
+    </p>
+    
+    <h3>&lt;meta name=&quot;description&quot; content=&quot;説明文&quot;&gt;</h3>
+    <p>
+      このhtmlファイルのdescription(説明文)をcontent内に書きます。<br>
+      <b>検索結果の紹介文(スニペット)として表示される可能性が非常に高く</b>、ユーザーが選択肢としてクリックする目安になる重要な部分の一つです。<br>
+      内容に沿ってユーザーが興味を持つように書くことが大切になります。<br>
+      PCでは約120文字、スマホでは50文字程度表示されます。<br>
+      titleタグと同様に他ページと内容が重複しないようにしましょう。
+    </p>
+    <small>googleでは検索順位には影響しないとしています。</small>
+
+  </body>
+</html>
